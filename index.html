@@ -11,11 +11,18 @@
         .tagline { font-size: 16px; color: #f4d03f; margin-top: 5px; }
         .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         h2 { color: #1b4d3e; border-bottom: 2px solid #f4d03f; padding-bottom: 5px; margin-top: 25px; }
-        .intro-box { background: #e8f5e9; padding: 15px; border-radius: 5px; font-size: 16px; line-height: 1.8; text-align: center; border-left: 5px solid #2e7d32; margin-bottom: 20px; font-weight: bold; }
-        .menu-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ddd; font-size: 16px; }
-        .price { font-weight: bold; color: #b22222; }
-        .location-box { text-align: center; margin-top: 20px; background: #fff3cd; padding: 15px; border-radius: 5px; font-size: 16px; line-height: 1.6; }
-        .btn { background-color: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 18px; margin-top: 20px; text-align: center; }
+        .intro-box { background: #e8f5e9; padding: 15px; border-radius: 5px; font-size: 15px; line-height: 1.8; text-align: center; border-left: 5px solid #2e7d32; margin-bottom: 20px; font-weight: bold; }
+        .rule-box { background: #fff3cd; padding: 12px; border-radius: 5px; font-size: 15px; text-align: center; margin-bottom: 20px; border: 1px solid #ffeeba; }
+        .menu-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ddd; font-size: 15px; }
+        .menu-item label { display: flex; align-items: center; gap: 10px; cursor: pointer; flex: 1; }
+        .price { font-weight: bold; color: #b22222; margin-right: 15px; min-width: 70px; text-align: right; }
+        .qty-input { width: 50px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
+        .gallery-item { background: #ddd; height: 120px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px; text-align: center; border: 1px dashed #aaa; }
+        .security-box { background: #e3f2fd; padding: 15px; border-radius: 5px; font-size: 14px; line-height: 1.6; margin-top: 20px; border-left: 5px solid #1976d2; }
+        .cart-summary { background: #f1f8e9; padding: 15px; border-radius: 5px; margin-top: 20px; text-align: center; font-size: 18px; font-weight: bold; border: 1px solid #c8e6c9; }
+        .location-box { text-align: center; margin-top: 20px; background: #fff9c4; padding: 15px; border-radius: 5px; font-size: 15px; line-height: 1.6; }
+        .btn { background-color: #25D366; color: white; padding: 14px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; font-size: 18px; margin-top: 20px; text-align: center; border: none; cursor: pointer; width: 100%; }
         .btn:hover { background-color: #1ebe57; }
     </style>
 </head>
@@ -31,82 +38,158 @@
         <div class="intro-box">
             వెజ్ నాన్ వెజ్ వంటలు అన్ని చేయబడును. సమయానికి వంట చేసి పంపించబడును.<br>
             అద్భుతమైన కేటరింగ్ సేవలు అందించబడును. కేటరింగ్ వంటల కోసం సంప్రదించవలెను.<br>
-            తక్కువ వంట కూడా చేసి పంపించబడును. సంప్రదించండి!<br>
-            <span style="color: #c62828;">మీరు కోరిన విధంగా వంటలు చేయబడును.</span>
+            తక్కువ వంట కూడా చేసి పంపించబడును. మీరు కోరిన విధంగా వంటలు చేయబడును.
         </div>
 
-        <h2>🌟 నాన్-వెజ్ స్పెషల్స్ & బిర్యానీలు</h2>
-        <div class="menu-item"><span>1 కేజీ చికెన్ బిర్యాని (1 కిలో చికెన్ + 1 కిలో రైస్)</span><span class="price">₹999</span></div>
-        <div class="menu-item"><span>2 కేజీ చికెన్ బిర్యాని (2 కిలోల చికెన్ + 2 కిలోల రైస్)</span><span class="price">₹1900</span></div>
-        <div class="menu-item"><span>5 కిలోల చికెన్ బిర్యాని (5 కిలోల రైస్ + 5 కేజీల చికెన్)</span><span class="price">₹4500</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఫిష్ బిర్యానీ</span><span class="price">₹1200</span></div>
-        <div class="menu-item"><span>వన్ కిలో ప్రాన్స్ బిర్యానీ</span><span class="price">₹1600</span></div>
-        <div class="menu-item"><span>వన్ కిలో చికెన్ బిర్యానీ నార్మల్ రైస్</span><span class="price">₹800</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఎగ్ బిర్యానీ</span><span class="price">₹600</span></div>
-        <div class="menu-item"><span>వన్ కిలో చికెన్ జొన్న బిర్యాని</span><span class="price">--</span></div>
-        <div class="menu-item"><span>వన్ కిలో మటన్ జొన్న బిర్యాని</span><span class="price">--</span></div>
-
-        <h2>🍲 నాన్-వెజ్ కర్రీస్ & ఫ్రైస్</h2>
-        <div class="menu-item"><span>వన్ కిలో చికెన్ కర్రీ</span><span class="price">₹700</span></div>
-        <div class="menu-item"><span>వన్ కిలో మటన్ కర్రీ</span><span class="price">₹1500</span></div>
-        <div class="menu-item"><span>వన్ కిలో హెడ్ కర్రీ (తలకాయ కూర)</span><span class="price">₹1500</span></div>
-        <div class="menu-item"><span>వన్ కిలో బోటి</span><span class="price">₹1000</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఫిష్ సూప్ కర్రీ</span><span class="price">₹900</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఫిష్ కర్రీ</span><span class="price">₹900</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఫిష్ ఫ్రై</span><span class="price">₹900</span></div>
-        <div class="menu-item"><span>వన్ కిలో ప్రాన్స్ ఫ్రై</span><span class="price">₹1200</span></div>
-        <div class="menu-item"><span>వన్ కిలో ప్రాన్స్ కర్రీ</span><span class="price">₹1400</span></div>
-
-        <h2>🥗 వెజ్ ఐటమ్స్ & రైస్</h2>
-        <div class="menu-item"><span>వన్ కిలో వెజ్ కర్రీ</span><span class="price">₹300</span></div>
-        <div class="menu-item"><span>వన్ కిలో పప్పు</span><span class="price">₹400</span></div>
-        <div class="menu-item"><span>వన్ కిలో సాంబార్</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో రైస్</span><span class="price">₹300</span></div>
-        <div class="menu-item"><span>వన్ కిలో బాస్మతి రైస్</span><span class="price">₹400</span></div>
-        <div class="menu-item"><span>వన్ కిలో బగారా రైస్</span><span class="price">₹400</span></div>
-        <div class="menu-item"><span>వన్ కిలో బగారా వెజ్ బిర్యానీ రైస్</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో కిచిడి</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో బిర్యానీ రైస్ కిచిడి</span><span class="price">₹600</span></div>
-        <div class="menu-item"><span>వన్ కిలో వెజ్ బిర్యానీ</span><span class="price">₹700</span></div>
-        <div class="menu-item"><span>వన్ కిలో చపాతి</span><span class="price">₹300</span></div>
-        <div class="menu-item"><span>రసం (లీటర్ / పోర్షన్)</span><span class="price">₹100</span></div>
-        <div class="menu-item"><span>బెల్లం రసం</span><span class="price">₹150</span></div>
-        <div class="menu-item"><span>ఉలవచారు</span><span class="price">₹300</span></div>
-        <div class="menu-item"><span>వన్ కిలో పెరుగు</span><span class="price">₹150</span></div>
-        <div class="menu-item"><span>వన్ కిలో రాగి ముద్ద</span><span class="price">₹350</span></div>
-        <div class="menu-item"><span>వన్ కిలో జవారీ రోటి</span><span class="price">₹400</span></div>
-
-        <h2>🍮 స్వీట్స్ & డెజర్ట్స్</h2>
-        <div class="menu-item"><span>వన్ కిలో కద్దుక మీఠా</span><span class="price">₹800</span></div>
-        <div class="menu-item"><span>వన్ కిలో రబడి</span><span class="price">₹1000</span></div>
-        <div class="menu-item"><span>వన్ కిలో డబుల్ కా మీఠా</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ లీటర్ సేమియా</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఖుర్బానీ క మీఠా</span><span class="price">₹1200</span></div>
-        <div class="menu-item"><span>వన్ కిలో కేసరి సేమియా</span><span class="price">₹400</span></div>
-
-        <h2>🍿 స్నాక్స్ & టిఫిన్స్</h2>
-        <div class="menu-item"><span>వన్ కిలో ఆనియన్ పకోడీ</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో మిర్చి బజ్జి</span><span class="price">₹600</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఆలు బజ్జి</span><span class="price">₹600</span></div>
-        <div class="menu-item"><span>వన్ డజన్ ఎగ్ బజ్జి</span><span class="price">₹250</span></div>
-        <div class="menu-item"><span>వన్ కిలో పునుగులు విత్ చట్నీ</span><span class="price">₹400</span></div>
-        <div class="menu-item"><span>వన్ కిలో వెజ్ ఫ్రైడ్ రైస్</span><span class="price">₹500</span></div>
-        <div class="menu-item"><span>వన్ కిలో ఎగ్ ఫ్రైడ్ రైస్</span><span class="price">₹600</span></div>
-        <div class="menu-item"><span>వన్ కిలో చికెన్ ఫ్రైడ్ రైస్</span><span class="price">₹800</span></div>
-        <div class="menu-item"><span>వన్ కిలో వెజ్ మంచూరియా</span><span class="price">₹800</span></div>
-        <div class="menu-item"><span>వన్ కిలో చికెన్ మంచూరియా</span><span class="price">₹1000</span></div>
-        <div class="menu-item"><span>100 పానీ పూరి</span><span class="price">₹250</span></div>
-
-        <div class="location-box">
-            📍 <strong>లొకేషన్:</strong> హైదరాబాద్, తెలంగాణ.<br><br>
-            మా ఫోన్ నెంబర్లకు సంప్రదించగలరు:<br>
-            📞 <strong>9177411712, 9963636575</strong>
+        <div class="rule-box">
+            ⏰ <strong>ముఖ్య గమనిక:</strong> వంట కనీసం <strong>4 గంటల ముందే</strong> ఆర్డర్ చేయాలి.<br>
+            🚚 <strong>డెలివరీ ఆఫర్:</strong> హైదరాబాద్ లోకల్ లో <strong>5 కిలోల నుండి ఆర్డర్లపై ఫ్రీ డెలివరీ!</strong>
         </div>
 
-        <div style="text-align: center;">
-            <a href="https://wa.me/919177411712?text=హలో,%20నాకు%20'తెలంగాణ%20రుచులు'%20లో%20ఆర్డర్%20చేయాలని%20ఉంది." class="btn" target="_blank">Order via WhatsApp 📱</a>
-        </div>
+        <form id="orderForm">
+            <h2>🌟 నాన్-వెజ్ స్పెషల్స్ & బిర్యానీలు</h2>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="1 కేజీ చికెన్ బిర్యాని" data-price="999"> 1 కేజీ చికెన్ బిర్యాని (చికెన్ + రైస్)</label><span class="price">₹999</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="2 కేజీ చికెన్ బిర్యాని" data-price="1900"> 2 కేజీ చికెన్ బిర్యాని</label><span class="price">₹1900</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="5 కిలోల చికెన్ బిర్యాని" data-price="4500"> 5 కిలోల చికెన్ బిర్యాని (Free Delivery)</label><span class="price">₹4500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఫిష్ బిర్యానీ" data-price="1200"> వన్ కిలో ఫిష్ బిర్యానీ</label><span class="price">₹1200</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ప్రాన్స్ బిర్యానీ" data-price="1600"> వన్ కిలో ప్రాన్స్ బిర్యానీ</label><span class="price">₹1600</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చికెన్ బిర్యానీ నార్మల్ రైస్" data-price="800"> వన్ కిలో చికెన్ బిర్యానీ నార్మల్ రైస్</label><span class="price">₹800</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఎగ్ బిర్యానీ" data-price="600"> వన్ కిలో ఎగ్ బిర్యానీ</label><span class="price">₹600</span><input type="number" class="qty-input" value="1" min="1"></div>
+
+            <h2>🍲 నాన్-వెజ్ కర్రీస్ & ఫ్రైస్</h2>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చికెన్ కర్రీ" data-price="700"> వన్ కిలో చికెన్ కర్రీ</label><span class="price">₹700</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో మటన్ కర్రీ" data-price="1500"> వన్ కిలో మటన్ కర్రీ</label><span class="price">₹1500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో హెడ్ కర్రీ" data-price="1500"> వన్ కిలో హెడ్ కర్రీ (తలకాయ కూర)</label><span class="price">₹1500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో బోటి" data-price="1000"> వన్ కిలో బోటి</label><span class="price">₹1000</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఫిష్ సూప్ కర్రీ" data-price="900"> వన్ కిలో ఫిష్ సూప్ కర్రీ</label><span class="price">₹900</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఫిష్ కర్రీ" data-price="900"> వన్ కిలో ఫిష్ కర్రీ</label><span class="price">₹900</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఫిష్ ఫ్రై" data-price="900"> వన్ కిలో ఫిష్ ఫ్రై</label><span class="price">₹900</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ప్రాన్స్ ఫ్రై" data-price="1200"> వన్ కిలో ప్రాన్స్ ఫ్రై</label><span class="price">₹1200</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ప్రాన్స్ కర్రీ" data-price="1400"> వన్ కిలో ప్రాన్స్ కర్రీ</label><span class="price">₹1400</span><input type="number" class="qty-input" value="1" min="1"></div>
+
+            <h2>🥗 వెజ్ ఐటమ్స్ & రైస్</h2>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో వెజ్ కర్రీ" data-price="300"> వన్ కిలో వెజ్ కర్రీ</label><span class="price">₹300</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో పప్పు" data-price="400"> వన్ కిలో పప్పు</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో సాంబార్" data-price="500"> వన్ కిలో సాంబార్</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో రైస్" data-price="300"> వన్ కిలో రైస్</label><span class="price">₹300</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో బాస్మతి రైస్" data-price="400"> వన్ కిలో బాస్మతి రైస్</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో బగారా రైస్" data-price="400"> వన్ కిలో బగారా రైస్</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో బగారా వెజ్ బిర్యానీ రైస్" data-price="500"> వన్ కిలో బగారా వెజ్ బిర్యానీ రైస్</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో కిచిడి" data-price="500"> వన్ కిలో కిచిడి</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో బిర్యానీ రైస్ కిచిడి" data-price="600"> వన్ కిలో బిర్యానీ రైస్ కిచిడి</label><span class="price">₹600</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో వెజ్ బిర్యానీ" data-price="700"> వన్ కిలో వెజ్ బిర్యానీ</label><span class="price">₹700</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చపాతి" data-price="300"> వన్ కిలో చపాతి</label><span class="price">₹300</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="రసం" data-price="100"> రసం</label><span class="price">₹100</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="బెల్లం రసం" data-price="150"> బెల్లం రసం</label><span class="price">₹150</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="ఉలవచారు" data-price="300"> ఉలవచారు</label><span class="price">₹300</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో పెరుగు" data-price="150"> వన్ కిలో పెరుగు</label><span class="price">₹150</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో రాగి ముద్ద" data-price="350"> వన్ కిలో రాగి ముద్ద</label><span class="price">₹350</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో జవారీ రోటి" data-price="400"> వన్ కిలో జవారీ రోటి</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+
+            <h2>🍮 స్వీట్స్ & డెజర్ట్స్</h2>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో కద్దుక మీఠా" data-price="800"> వన్ కిలో కద్దుక మీఠా</label><span class="price">₹800</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో రబడి" data-price="1000"> వన్ కిలో రబడి</label><span class="price">₹1000</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో డబుల్ కా మీఠా" data-price="500"> వన్ కిలో డబుల్ కా మీఠా</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ లీటర్ సేమియా" data-price="500"> వన్ లీటర్ సేమియా</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఖుర్బానీ క మీఠా" data-price="1200"> వన్ కిలో ఖుర్బానీ క మీఠా</label><span class="price">₹1200</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో కేసరి సేమియా" data-price="400"> వన్ కిలో కేసరి సేమియా</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+
+            <h2>🍿 స్నాక్స్ & టిఫిన్స్</h2>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఆనియన్ పకోడీ" data-price="500"> వన్ కిలో ఆనియన్ పకోడీ</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో మిర్చి బజ్జి" data-price="600"> వన్ కిలో మిర్చి బజ్జి</label><span class="price">₹600</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఆలు బజ్జి" data-price="600"> వన్ కిలో ఆలు బజ్జి</label><span class="price">₹600</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ డజన్ ఎగ్ బజ్జి" data-price="250"> వన్ డజన్ ఎగ్ బజ్జి</label><span class="price">₹250</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో పునుగులు విత్ చట్నీ" data-price="400"> వన్ కిలో పునుగులు విత్ చట్నీ</label><span class="price">₹400</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో వెజ్ ఫ్రైడ్ రైస్" data-price="500"> వన్ కిలో వెజ్ ఫ్రైడ్ రైస్</label><span class="price">₹500</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో ఎగ్ ఫ్రైడ్ రైస్" data-price="600"> వన్ కిలో ఎగ్ ఫ్రైడ్ రైస్</label><span class="price">₹600</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చికెన్ ఫ్రైడ్ రైస్" data-price="800"> వన్ కిలో చికెన్ ఫ్రైడ్ రైస్</label><span class="price">₹800</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో వెజ్ మంచూరియా" data-price="800"> వన్ కిలో వెజ్ మంచూరియా</label><span class="price">₹800</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చికెన్ మంచూరియా" data-price="1000"> వన్ కిలో చికెన్ మంచూరియా</label><span class="price">₹1000</span><input type="number" class="qty-input" value="1" min="1"></div>
+            <div class="menu-item"><label><input type="checkbox" name="item" value="100 పానీ పూరి" data-price="250"> 100 పానీ పూరి</label><span class="price">₹250</span><input type="number" class="qty-input" value="1" min="1"></div>
+
+            <h2>📸 మా వంటకాల ఫోటో గ్యాలరీ (Photo Gallery)</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">చికెన్ దమ్ బిర్యానీ</div>
+                <div class="gallery-item">మటన్ కర్రీ</div>
+                <div class="gallery-item">స్పెషల్ స్వీట్స్</div>
+                <div class="gallery-item">టిఫిన్స్ & స్నాక్స్</div>
+            </div>
+
+            <div class="security-box">
+                🔒 <strong>భద్రత & నమ్మకం (Security & Trust):</strong><br>
+                • మీ ఆర్డర్ వివరాలు మరియు ఫోన్ నంబర్లు పూర్తిగా గోప్యంగా ఉంచబడతాయి.<br>
+                • స్వచ్ఛమైన మరియు నాణ్యమైన నూనె, దినుసులతో శుచిగా వంట చేయబడుతుంది.<br>
+                • సురక్షితమైన ఆన్‌లైన్ పేమెంట్ లేదా వాట్సాప్ ద్వారా నేరుగా ఆర్డర్ నిర్ధారణ.
+            </div>
+
+            <div class="cart-summary">
+                మొత్తం అంచనా ధర (Total): ₹<span id="totalPrice">0</span>
+            </div>
+
+            <div class="location-box">
+                📍 <strong>లొకేషన్:</strong> హైదరాబాద్, తెలంగాణ.<br>
+                🚚 5 కిలోల నుండి లోకల్ డెలివరీ ఫ్రీ!<br><br>
+                మా ఫోన్ నెంబర్లకు సంప్రదించగలరు:<br>
+                📞 <strong>9177411712, 9963636575</strong>
+            </div>
+
+            <button type="button" class="btn" onclick="sendWhatsAppOrder()">Order via WhatsApp 📱</button>
+        </form>
     </div>
+
+    <script>
+        function calculateTotal() {
+            let total = 0;
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+                const qtyInput = item.querySelector('.qty-input');
+                if (checkbox.checked) {
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    const qty = parseInt(qtyInput.value) || 1;
+                    total += price * qty;
+                }
+            });
+            document.getElementById('totalPrice').innerText = total;
+        }
+
+        document.querySelectorAll('input[type="checkbox"], .qty-input').forEach(input => {
+            input.addEventListener('change', calculateTotal);
+            input.addEventListener('input', calculateTotal);
+        });
+
+        function sendWhatsAppOrder() {
+            let orderText = "నమస్తే అండి, నాకు 'తెలంగాణ రుచులు' నుండి క్రింది వంటకాలు ఆర్డర్ చేయాలని ఉంది:\n\n";
+            let total = 0;
+            let hasItem = false;
+
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+                const qtyInput = item.querySelector('.qty-input');
+                if (checkbox.checked) {
+                    hasItem = true;
+                    const name = checkbox.value;
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    const qty = parseInt(qtyInput.value) || 1;
+                    const itemTotal = price * qty;
+                    total += itemTotal;
+                    orderText += `- ${name} (Qty: ${qty}) - ₹${itemTotal}\n`;
+                }
+            });
+
+            if (!hasItem) {
+                alert("దయచేసి ముందుగా ఏదైనా ఒక ఐటమ్‌ని సెలెక్ట్ చేయండి!");
+                return;
+            }
+
+            orderText += `\nమొత్తం బిల్లు (Total): ₹${total}\n\n(గమనిక: 4 గంటల ముందే ఆర్డర్ చేయబడింది. హైదరాబాద్ లోకల్)\nదయచేసి నా ఆర్డర్‌ను కన్ఫర్మ్ చేయండి. ధన్యవాదాలు!`;
+
+            const encodedText = encodeURIComponent(orderText);
+            const whatsappUrl = `https://wa.me/919177411712?text=${encodedText}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 
 </body>
 </html>
