@@ -17,6 +17,7 @@
         .menu-item label { display: flex; align-items: center; gap: 10px; cursor: pointer; flex: 1; }
         .price { font-weight: bold; color: #b22222; margin-right: 15px; min-width: 70px; text-align: right; }
         .qty-input { width: 50px; padding: 5px; text-align: center; border: 1px solid #ccc; border-radius: 4px; }
+        .payment-box { background: #e0f7fa; padding: 15px; border-radius: 5px; margin-top: 20px; text-align: center; font-size: 15px; border-left: 5px solid #00acc1; line-height: 1.8; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
         .gallery-item { background: #ddd; height: 120px; border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px; text-align: center; border: 1px dashed #aaa; }
         .security-box { background: #e3f2fd; padding: 15px; border-radius: 5px; font-size: 14px; line-height: 1.6; margin-top: 20px; border-left: 5px solid #1976d2; }
@@ -107,6 +108,12 @@
             <div class="menu-item"><label><input type="checkbox" name="item" value="వన్ కిలో చికెన్ మంచూరియా" data-price="1000"> వన్ కిలో చికెన్ మంచూరియా</label><span class="price">₹1000</span><input type="number" class="qty-input" value="1" min="1"></div>
             <div class="menu-item"><label><input type="checkbox" name="item" value="100 పానీ పూరి" data-price="250"> 100 పానీ పూరి</label><span class="price">₹250</span><input type="number" class="qty-input" value="1" min="1"></div>
 
+            <div class="payment-box">
+                💳 <strong>ఫోన్‌పే & గూగుల్ పే (PhonePe / GPay) ఆన్‌లైన్ పేమెంట్:</strong><br>
+                UPI ID: <strong style="color: #b22222; font-size: 16px;">mujahidsdghf-7@okicici</strong><br>
+                <span style="font-size: 13px; color: #555;">(డబ్బులు పంపిన తర్వాత ఆ స్క్రీన్‌షాట్‌ను వాట్సాప్‌లో పంపగలరు)</span>
+            </div>
+
             <h2>📸 మా వంటకాల ఫోటో గ్యాలరీ (Photo Gallery)</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">చికెన్ దమ్ బిర్యానీ</div>
@@ -119,7 +126,7 @@
                 🔒 <strong>భద్రత & నమ్మకం (Security & Trust):</strong><br>
                 • మీ ఆర్డర్ వివరాలు మరియు ఫోన్ నంబర్లు పూర్తిగా గోప్యంగా ఉంచబడతాయి.<br>
                 • స్వచ్ఛమైన మరియు నాణ్యమైన నూనె, దినుసులతో శుచిగా వంట చేయబడుతుంది.<br>
-                • సురక్షితమైన ఆన్‌లైన్ పేమెంట్ లేదా వాట్సాప్ ద్వారా నేరుగా ఆర్డర్ నిర్ధారణ.
+                • సురక్షితమైన ఆన్‌లైన్ పేమెంట్ (GPay/PhonePe) లేదా వాట్సాప్ ద్వారా నేరుగా ఆర్డర్ నిర్ధారణ.
             </div>
 
             <div class="cart-summary">
@@ -183,7 +190,7 @@
                 return;
             }
 
-            orderText += `\nమొత్తం బిల్లు (Total): ₹${total}\n\n(గమనిక: 4 గంటల ముందే ఆర్డర్ చేయబడింది. హైదరాబాద్ లోకల్)\nదయచేసి నా ఆర్డర్‌ను కన్ఫర్మ్ చేయండి. ధన్యవాదాలు!`;
+            orderText += `\nమొత్తం బిల్లు (Total): ₹${total}\n\n(గమనిక: 4 గంటల ముందే ఆర్డర్ చేయబడింది. హైదరాబాద్ లోకల్)\nపేమెంట్ యూపీఐ ఐడీ: mujahidsdghf-7@okicici ద్వారా చేశాను / చేస్తాను.\nదయచేసి నా ఆర్డర్‌ను కన్ఫర్మ్ చేయండి. ధన్యవాదాలు!`;
 
             const encodedText = encodeURIComponent(orderText);
             const whatsappUrl = `https://wa.me/919177411712?text=${encodedText}`;
